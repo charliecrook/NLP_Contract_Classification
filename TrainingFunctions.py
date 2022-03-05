@@ -68,8 +68,8 @@ def performance_report(X_test, y_test, model):
     print('Global f1 score:', f1)
     print('\n')
     print(multilabel_confusion_matrix(y_test, y_pred))
-
-def kaggle_prediction(test_X, model, name):
+    
+def kaggle_prediction(test_X, result_ids, model, name):
   """
   Parameters:
   test: (dataframe) unseen test data
