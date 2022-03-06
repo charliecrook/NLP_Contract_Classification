@@ -123,10 +123,18 @@ def split_labels(data):
           train_y[row][col] = 1. if l == '1' else 0.
   return train_y 
 
-# this function splits the data into two categories: word tokens and onehot data,
-# then returns a list of two elements: one for each data type.
 def split_data(data):
+  """
+  this function splits the data into two categories: word tokens and onehot data,
+  then returns a list of two elements: one for each data type.
+  
+  Parameters:
+  data: dataframe
 
+  Returns:
+  token_ids: numpy array of token id values.
+  categorical_data: numpy array of onehot data
+  """
     categorical_data = data[data.columns[len(data.columns)-3:]]
     token_ids = data[data.columns[:len(data.columns)-3]]
     
