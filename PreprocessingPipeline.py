@@ -8,8 +8,6 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 class SelectColumns(BaseEstimator, TransformerMixin):
-    # the code for this select columns transform was taken from the following url:
-    #https: // queirozf.com / entries / scikit - learn - pipelines - custom - pipelines - and -pandas - integration
     def __init__(self, columns=None):
         super().__init__()
         self.columns = columns
